@@ -1,0 +1,21 @@
+###
+
+# curl http://127.0.0.1:7002/recommendation?productId=12 -s | jq .
+GET http://127.0.0.1:7002/recommendation?productId=12
+
+###
+
+# curl http://127.0.0.1:7003/reviews?productId=12 -s | jq .
+GET http://127.0.0.1:7003/reviews?productId=12
+
+###
+
+# curl http://127.0.0.1:7001/product/123 -s | jq .
+GET http://127.0.0.1:7001/product/123
+
+###
+
+# curl http://127.0.0.1:7000/product-composite/1 -s | jq .
+GET http://127.0.0.1:7000/product-composite/213
+
+# use -i flag to see the http status returned

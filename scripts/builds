@@ -1,0 +1,18 @@
+- Build services one by one:
+cd microservices/product-service; ./gradlew build; cd -; \
+cd microservices/review-service; ./gradlew build; cd -; \
+cd microservices/recommendation-service; ./gradlew build; cd -; \
+cd microservices/product-composite-service; ./gradlew build; cd -;
+
+- Or build the whole multi module project with:
+./gradlew build
+
+- Build a service and start it from the cmd:
+./gradlew build && java -jar microservices/recommendation-service/build/libs/*.jar
+
+- Kill running jobs
+kill $(jobs -p)
+
+- Kill apps running on ports
+
+sudo kill -9 $(sudo lsof -t -i:7000) $(sudo lsof -t -i:7001) $(sudo lsof -t -i:7002) $(sudo lsof -t -i:7003)

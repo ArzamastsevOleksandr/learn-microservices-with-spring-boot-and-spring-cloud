@@ -1,0 +1,7 @@
+server.port: 7001
+server.error.include-message: always
+
+logging:
+  level:
+    root: info
+    com.example.productservice: debug
